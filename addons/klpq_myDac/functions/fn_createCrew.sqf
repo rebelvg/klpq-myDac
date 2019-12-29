@@ -28,15 +28,18 @@ if (_vehicle emptyPositions "gunner" > 0) then
 };
 
 {
-    _unit = [_pos, _grp, _crew] call klpq_myDac_fnc_createUnit;
-    _unit moveInTurret [_vehicle, (_x select 3)];
+    if (_forEachIndex < (_count min 1) * (count fullCrew [_vehicle, "turret", true])) then {
+        _unit = [_pos, _grp, _crew] call klpq_myDac_fnc_createUnit;
+        _unit moveInTurret [_vehicle, (_x select 3)];
+    }
 } forEach (fullCrew [_vehicle, "turret", true]);
 
-for "_i" from 1 to (_count min count (fullCrew [_vehicle, "cargo", true])) do
 {
-    _unit = [_pos, _grp, _crew] call klpq_myDac_fnc_createUnit;
-    _unit moveInCargo _vehicle;
-};
+    if (_forEachIndex < ((_count min 2) - 1) * (count fullCrew [_vehicle, "cargo", true])) then {
+        _unit = [_pos, _grp, _crew] call klpq_myDac_fnc_createUnit;
+        _unit moveInCargo _vehicle;
+    }
+} forEach (fullCrew [_vehicle, "cargo", true]);
 
 if (_isAirCrew) then {
     {
