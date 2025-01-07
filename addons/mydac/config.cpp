@@ -5,11 +5,13 @@ class CfgPatches
         units[] = {};
         weapons[] = {};
         requiredVersion = 1;
-        requiredAddons[] = {};
+        requiredAddons[] = {
+            "cba_main"
+        };
         version = "1.0.0";
         name = "KLPQ MyDAC";
         author = "KLPQ";
-        url = "http://arma.klpq.men/";
+        url = "http://klpq.io/";
     };
 };
 

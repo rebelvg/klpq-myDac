@@ -9,16 +9,16 @@ private _sideNumber = getNumber (configFile >> "CfgVehicles" >> _class >> "side"
 
 switch (_sideNumber) do {
 case 0: {
-        _side = EAST;
+        _side = "east";
     };
 case 1: {
-        _side = WEST;
+        _side = "west";
     };
 case 2: {
-        _side = RESISTANCE;
+        _side = "resistance";
     };
 case 3: {
-        _side = CIVILIAN;
+        _side = "civilian";
     };
     default {
         _side = sideEmpty;

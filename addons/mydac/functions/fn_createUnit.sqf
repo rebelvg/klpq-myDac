@@ -9,7 +9,7 @@ private _unit = _grp createUnit [_class, _pos, [], 0, "NONE"];
 
 _unit setVariable ["md_var_mdUnit", true];
 
-_unit addEventHandler ["killed", {
+_unit addEventHandler ["Killed", {
     params ["_unit"];
 
     _unit setVariable ["md_var_killedTime", CBA_missionTime];

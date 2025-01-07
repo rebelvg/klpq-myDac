@@ -10,7 +10,7 @@ if ({_x > 0} count _respawns == 0) exitWith {};
 
 if !(_camp getVariable ["md_var_isCampEnabled", false]) exitWith {};
 
-if ({_x distance2d _camp < _campRadius} count allPlayers > 0) exitWith {};
+if ({_x distance2D _camp < _campRadius} count allPlayers > 0) exitWith {};
 
 _campZones = _campZones select {_x getVariable ["md_var_isZoneEnabled", false]};
 

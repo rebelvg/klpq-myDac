@@ -147,7 +147,7 @@ _text pushBack parseText "<br/>";
             };
 
             _zoneConnectMarker setMarkerShapeLocal "RECTANGLE";
-            _zoneConnectMarker setMarkerSizeLocal [(_camp distance2d _x) / 2, 5];
+            _zoneConnectMarker setMarkerSizeLocal [(_camp distance2D _x) / 2, 5];
             _zoneConnectMarker setMarkerDirLocal (_camp getRelDir _x) + 90;
 
             if (_camp getVariable ["md_var_isCampEnabled", false]) then {

@@ -1,6 +1,6 @@
 class functions
 {
-    file = "klpq_myDac\functions";
+    file = "klpq\addons\mydac\functions";
 
     class preInit {preInit = 1;};
     class postInit {postInit = 1;};

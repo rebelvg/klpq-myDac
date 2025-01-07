@@ -1,0 +1,11 @@
+name = "KLPQ MyDAC"
+prefix = "klpq"
+
+[properties]
+author = "Rebel"
+
+[version]
+major = 1
+minor = 0
+patch = 0
+build = 0

@@ -6,7 +6,7 @@ private _collectionRadius = getNumber (missionConfigFile >> "KLPQ_MyDAC" >> "Set
 {
     _unit = _x;
 
-    if ((CBA_missionTime - (_unit getVariable ["md_var_killedTime", 0])) > _collectionTime || {_x distance2d _unit < _collectionRadius} count allPlayers == 0) then {
+    if ((CBA_missionTime - (_unit getVariable ["md_var_killedTime", 0])) > _collectionTime || {_x distance2D _unit < _collectionRadius} count allPlayers == 0) then {
         deleteVehicle _unit;
         systemChat format ["Deleted %1.", _unit];
     };
